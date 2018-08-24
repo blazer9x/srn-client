@@ -1,4 +1,4 @@
-package com.srn.crm.core.utils;
+package com.srn.crm.core.utils.logger;
 
 import android.content.Context;
 import android.os.Process;

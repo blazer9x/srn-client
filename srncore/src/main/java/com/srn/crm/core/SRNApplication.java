@@ -3,8 +3,8 @@ package com.srn.crm.core;
 import android.app.Application;
 import android.content.Context;
 
-import com.srn.crm.core.utils.DebugLogTree;
-import com.srn.crm.core.utils.FileLogger;
+import com.srn.crm.core.utils.logger.DebugLogTree;
+import com.srn.crm.core.utils.logger.FileLogger;
 
 import timber.log.Timber;
 
