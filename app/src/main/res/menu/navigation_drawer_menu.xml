@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="My Profile"/>
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="My Coupon"/>
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Add Points"/>
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Menu"/>
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Our Promo"/>
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="History"/>
+
+</menu>

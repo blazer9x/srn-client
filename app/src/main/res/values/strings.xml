@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">sarirasa</string>
+
+    <!-- navigation title -->
+    <string name="navigation_home">Home</string>
+    <string name="navigation_location">Location</string>
+    <string name="navigation_notification">Notification</string>
+    <string name="navigation_points">Points</string>
+</resources>
