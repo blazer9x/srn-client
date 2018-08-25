@@ -16,8 +16,8 @@ public abstract class SRNApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mContext = getApplicationContext();
-
         initialLog();
+        Timber.d("app#oncreate application");
     }
 
     public static Context getContext() {
@@ -49,7 +49,7 @@ public abstract class SRNApplication extends Application {
     }
 
     public boolean shouldLogApplicationToFile() {
-        return false;
+        return true;
     }
 
     public abstract boolean isProduction();

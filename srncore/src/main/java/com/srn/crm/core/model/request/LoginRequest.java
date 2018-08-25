@@ -12,10 +12,6 @@ public class LoginRequest extends BaseRequest {
     @SerializedName("token")
     private String mToken;
 
-    public LoginRequest() {
-
-    }
-
     public String getToken() {
         return mToken;
     }
@@ -26,6 +22,7 @@ public class LoginRequest extends BaseRequest {
 
 
     protected LoginRequest(Parcel in) {
+        super(in);
         this.mToken = in.readString();
     }
 
@@ -36,6 +33,7 @@ public class LoginRequest extends BaseRequest {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        super.writeToParcel(dest, flags);
         dest.writeString(this.mToken);
     }
 

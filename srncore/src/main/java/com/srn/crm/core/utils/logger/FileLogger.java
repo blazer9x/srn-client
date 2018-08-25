@@ -34,7 +34,7 @@ import java.util.zip.ZipOutputStream;
 
 public class FileLogger {
 
-    private static final String DEBUG_LOG_DIR = "debug_log";
+    private static final String DEBUG_LOG_DIR = "srn_debug_log";
     private static final int MAX_OLD_LOG_DAY = 3;
     private static final String LOG_EXTENSION = "log";
     public static final String META_LOG_FILE = "meta.log";
@@ -91,7 +91,7 @@ public class FileLogger {
             File file = createDebugLogFile();
             StringBuilder stringBuilder = new StringBuilder();
             //stringBuilder.append(SecurityUtils.AESEncrypt(LINE_DATE_FORMAT.format(new Date()) + ": " + message, true));
-            stringBuilder.append("\n");
+            stringBuilder.append(LINE_DATE_FORMAT.format(new Date()) + ": " + message);
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, true), CharEncoding.UTF_8));
             writer.append(stringBuilder.toString());
             writer.close();

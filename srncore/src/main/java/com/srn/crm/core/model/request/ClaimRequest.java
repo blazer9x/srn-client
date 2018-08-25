@@ -24,12 +24,14 @@ public class ClaimRequest extends BaseRequest {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        super.writeToParcel(dest, flags);
         dest.writeString(this.mOfferId);
         dest.writeString(this.mVoucherCode);
         dest.writeLong(this.mClaimedDatetime);
     }
 
     public ClaimRequest(Parcel in) {
+        super(in);
         this.mOfferId = in.readString();
         this.mVoucherCode = in.readString();
         this.mClaimedDatetime = in.readLong();

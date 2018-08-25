@@ -11,7 +11,7 @@ import timber.log.Timber;
 
 public class DebugLogTree extends Timber.DebugTree {
 
-    public static final String SPLITTER = "::";
+    public static final String SPLITTER = "#";
 
     private HashMap<String, FileLogger> mFileLoggerMap;
 

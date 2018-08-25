@@ -20,14 +20,6 @@ public class ProvisionRequest extends BaseRequest {
     @SerializedName("osversion")
     private String mOsVersion;
 
-    @SerializedName("fcmId")
-    private String mFcmId;
-
-    public ProvisionRequest() {
-
-    }
-
-
     public String getImei() {
         return mImei;
     }
@@ -61,11 +53,11 @@ public class ProvisionRequest extends BaseRequest {
     }
 
     protected ProvisionRequest(Parcel in) {
+        super(in);
         this.mImei = in.readString();
         this.mModel = in.readString();
         this.mManufacture = in.readString();
         this.mOsVersion = in.readString();
-        this.mFcmId = in.readString();
 
     }
     @Override
@@ -75,11 +67,11 @@ public class ProvisionRequest extends BaseRequest {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        super.writeToParcel(dest, flags);
         dest.writeString(mImei);
         dest.writeString(mModel);
         dest.writeString(mManufacture);
         dest.writeString(mOsVersion);
-        dest.writeString(mFcmId);
     }
 
     @Override

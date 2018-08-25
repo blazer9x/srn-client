@@ -21,11 +21,13 @@ public class RedeemRequest extends BaseRequest {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        super.writeToParcel(dest, flags);
         dest.writeString(this.mOfferId);
         dest.writeInt(this.mRequiredPoints);
     }
 
     public RedeemRequest(Parcel in) {
+        super(in);
         this.mOfferId = in.readString();
         this.mRequiredPoints = in.readInt();
     }
