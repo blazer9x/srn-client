@@ -2,7 +2,9 @@ package com.srn.crm.core.net;
 
 import com.srn.crm.core.model.BaseResponse;
 import com.srn.crm.core.model.request.ClaimRequest;
+import com.srn.crm.core.model.request.FcmTokenUpdatesRequest;
 import com.srn.crm.core.model.request.RedeemRequest;
+import com.srn.crm.core.model.response.FcmToken;
 import com.srn.crm.core.model.response.Login;
 import com.srn.crm.core.model.response.Offer;
 import com.srn.crm.core.model.response.PointRewards;
@@ -29,6 +31,11 @@ public interface RestService {
     @Headers(RestConstants.CONTENT_TYPE)
     @POST(RestConstants.LOGIN)
     void srnLogin(@Body TypedInput request, Callback<BaseResponse<Login>> callback);
+
+
+    @Headers(RestConstants.CONTENT_TYPE)
+    @POST(RestConstants.FCM_TOKEN_UPDATE)
+    void srnUpdateToken(@Body FcmTokenUpdatesRequest request, Callback<BaseResponse<FcmToken>> callback);
 
     /* promotion service */
     @Headers(RestConstants.CONTENT_TYPE)

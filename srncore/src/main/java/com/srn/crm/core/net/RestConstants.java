@@ -13,6 +13,7 @@ public class RestConstants {
     public static final String LOGIN = BASE_URL + "login.json";
     public static final String PROVISIONING = BASE_URL + "provision.json";
     public static final String PROFILE = BASE_URL + "profile.json";
+    public static final String FCM_TOKEN_UPDATE = BASE_URL + "notiftoken.json";
 
     //promotion api
     public static final String OFFER = BASE_URL + "offer.json";
