@@ -44,7 +44,7 @@ public class RestHelper {
         return sInstance;
     }
 
-    public RestService createRestService(boolean serverEndpoint, String endPoint, long connectTimeout, long readTimeout, RequestInterceptor requestInterceptor, RestAdapter.LogLevel logLevel, int endPointType) {
+    public RestService buildRestService(boolean serverEndpoint, String endPoint, long connectTimeout, long readTimeout, RequestInterceptor requestInterceptor, RestAdapter.LogLevel logLevel) {
         RestAdapter.Builder builder = new RestAdapter.Builder()
                 .setClient(getOkClient(connectTimeout, readTimeout))
                 .setEndpoint(endPoint)

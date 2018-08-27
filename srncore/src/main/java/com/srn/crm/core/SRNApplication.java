@@ -6,6 +6,7 @@ import android.content.Context;
 import com.srn.crm.core.utils.logger.DebugLogTree;
 import com.srn.crm.core.utils.logger.FileLogger;
 
+import retrofit.RestAdapter;
 import timber.log.Timber;
 
 public abstract class SRNApplication extends Application {
@@ -48,10 +49,18 @@ public abstract class SRNApplication extends Application {
         });
     }
 
+    public RestAdapter.LogLevel getRetrofitLogLevel() {
+        return RestAdapter.LogLevel.BASIC;
+    }
+
+
     public boolean shouldLogApplicationToFile() {
         return true;
     }
 
     public abstract boolean isProduction();
+
+    public abstract String getServerEndPoint();
+
 
 }
