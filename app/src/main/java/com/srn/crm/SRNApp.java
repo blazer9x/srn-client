@@ -14,4 +14,9 @@ public class SRNApp extends SRNApplication {
     public boolean isProduction() {
         return false;
     }
+
+    @Override
+    public String getServerEndPoint() {
+        return null;
+    }
 }

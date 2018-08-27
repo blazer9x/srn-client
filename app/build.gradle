@@ -16,14 +16,55 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
         release {
+            storeFile file("srn.keystore")
+            storePassword "sarirasa"
+            keyAlias "sarirasa"
+            keyPassword "sarirasa"
+        }
+        release {
+            storeFile file("debug.keystore")
+            storePassword "sarirasa"
+            keyAlias "sarirasa"
+            keyPassword "sarirasa"
+        }
+    }
+
+    buildTypes {
+        debug {
             minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     buildToolsVersion '27.0.3'
+
+    flavorDimensions "srn"
+
+    productFlavors {
+
+        development {
+            dimension "srn"
+        }
+
+        staging {
+            dimension "srn"
+        }
+
+        production {
+            dimension "srn"
+        }
+    }
+
 }
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

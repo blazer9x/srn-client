@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".view.common.OpeningActivity" />
 
         <service android:name=".fcm.FcmMessagingService">
             <intent-filter>
