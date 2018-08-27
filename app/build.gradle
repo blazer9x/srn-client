@@ -20,16 +20,20 @@ android {
     signingConfigs {
         release {
             storeFile file("srn.keystore")
-            storePassword "sarirasa"
+            storePassword "S4r!r@saNus4ntara!"
             keyAlias "sarirasa"
-            keyPassword "sarirasa"
+            keyPassword "S4r!r@saNus4ntara!"
         }
         release {
             storeFile file("debug.keystore")
-            storePassword "sarirasa"
+            storePassword "S4r!r@saNus4ntara!"
             keyAlias "sarirasa"
-            keyPassword "sarirasa"
+            keyPassword "S4r!r@saNus4ntara!"
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     buildTypes {
@@ -38,10 +42,26 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
+            def time = getDateTime()
             minifyEnabled true
             shrinkResources true
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                def versionCode = variant.versionCode
+                def variants = variant.baseName.replace('-', '_')
+                def apkName = "sarirasa_nusantara"
+                apkName += "_" + variants
+                apkName += "_v" + versionName
+                apkName += "_" + versionCode
+                apkName += "_" + time
+
+                for (output in variant.outputs) {
+                        output.outputFileName = new File("./../../../../../build/apk", apkName + ".apk")
+                }
+
+
+            }
         }
     }
     buildToolsVersion '27.0.3'
@@ -63,6 +83,13 @@ android {
         }
     }
 
+}
+
+
+def getDateTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd_HHmm')
+    return formattedDate
 }
 
 
