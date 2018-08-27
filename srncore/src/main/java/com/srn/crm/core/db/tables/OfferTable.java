@@ -7,7 +7,7 @@ public class OfferTable implements BaseTable {
     public static String TABLE_NAME = "offer";
 
     private static String FIELD_OFFERID = "offer_id";
-    private static String FIELD_BRANDID = "brand_id";
+    public static String FIELD_BRANDID = "brand_id";
     private static String FIELD_OFFERTITLE = "offer_title";
     private static String FIELD_OFFERTNC = "offer_tnc";
     private static String FIELD_VALIDITY = "offer_validity";

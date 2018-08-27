@@ -1,2 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.srn.crm.core" />
+    package="com.srn.crm.core">
+
+    <application>
+
+        <!-- Content Provider -->
+        <provider
+            android:name="com.srn.crm.core.db.DataContentProvider"
+            android:authorities="com.srn.crm"
+            android:exported="false">
+        </provider>
+
+    </application>
+
+
+</manifest>
+
+
