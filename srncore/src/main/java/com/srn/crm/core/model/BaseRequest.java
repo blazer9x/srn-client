@@ -14,6 +14,9 @@ public abstract class BaseRequest implements Parcelable {
     @SerializedName("timestamp")
     private long mTimestamp;
 
+    public BaseRequest() {
+
+    }
 
     public BaseRequest(Parcel in) {
         this.mSessionId = in.readString();

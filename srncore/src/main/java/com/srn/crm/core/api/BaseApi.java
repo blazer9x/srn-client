@@ -20,6 +20,10 @@ public abstract class BaseApi {
         this.mContext = context;
     }
 
+    protected RestService buildRestService() {
+       return buildRestService(mContext);
+    }
+
     public static RestService buildRestService(Context context) {
         return buildRestService(context, REQUEST_TIMEOUT);
     }

@@ -5,7 +5,7 @@ import com.srn.crm.core.model.request.ClaimRequest;
 import com.srn.crm.core.model.request.FcmTokenUpdatesRequest;
 import com.srn.crm.core.model.request.RedeemRequest;
 import com.srn.crm.core.model.response.FcmToken;
-import com.srn.crm.core.model.response.Login;
+import com.srn.crm.core.model.response.UserProfile;
 import com.srn.crm.core.model.response.Offer;
 import com.srn.crm.core.model.response.PointRewards;
 import com.srn.crm.core.model.response.Provisioning;
@@ -30,7 +30,7 @@ public interface RestService {
 
     @Headers(RestConstants.CONTENT_TYPE)
     @POST(RestConstants.LOGIN)
-    void srnLogin(@Body TypedInput request, Callback<BaseResponse<Login>> callback);
+    void srnLogin(@Body TypedInput request, Callback<BaseResponse<UserProfile>> callback);
 
 
     @Headers(RestConstants.CONTENT_TYPE)

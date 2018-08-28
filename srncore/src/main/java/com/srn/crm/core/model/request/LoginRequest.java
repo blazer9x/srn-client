@@ -20,6 +20,9 @@ public class LoginRequest extends BaseRequest {
         this.mToken = token;
     }
 
+    public LoginRequest() {
+
+    }
 
     protected LoginRequest(Parcel in) {
         super(in);

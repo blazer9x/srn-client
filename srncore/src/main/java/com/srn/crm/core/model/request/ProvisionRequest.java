@@ -52,6 +52,10 @@ public class ProvisionRequest extends BaseRequest {
         this.mOsVersion = osVersion;
     }
 
+    public ProvisionRequest() {
+
+    }
+
     protected ProvisionRequest(Parcel in) {
         super(in);
         this.mImei = in.readString();

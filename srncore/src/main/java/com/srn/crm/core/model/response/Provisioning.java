@@ -18,6 +18,9 @@ public class Provisioning implements Parcelable {
         this.mSessionId = sessionId;
     }
 
+    public Provisioning() {
+    }
+
     public Provisioning(Parcel in) {
         this.mSessionId = in.readString();
     }

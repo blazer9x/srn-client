@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
-public class Login implements Parcelable {
+public class UserProfile implements Parcelable {
 
     @SerializedName("email")
     private String mEmail;
@@ -32,11 +32,75 @@ public class Login implements Parcelable {
     @SerializedName("alternateEmail")
     private String mAlternateEmail;
 
-    public Login() {
+    public UserProfile() {
 
     }
 
-    protected Login(Parcel in) {
+    public String getEmail() {
+        return mEmail;
+    }
+
+    public void setEmail(String mEmail) {
+        this.mEmail = mEmail;
+    }
+
+    public String getFullName() {
+        return mFullName;
+    }
+
+    public void setFullName(String mFullName) {
+        this.mFullName = mFullName;
+    }
+
+    public String getNickName() {
+        return mNickName;
+    }
+
+    public void setNickName(String mNickName) {
+        this.mNickName = mNickName;
+    }
+
+    public String getAddress() {
+        return mAddress;
+    }
+
+    public void setAddress(String mAddress) {
+        this.mAddress = mAddress;
+    }
+
+    public String getCity() {
+        return mCity;
+    }
+
+    public void setCity(String mCity) {
+        this.mCity = mCity;
+    }
+
+    public String getProvince() {
+        return mProvince;
+    }
+
+    public void setProvince(String mProvince) {
+        this.mProvince = mProvince;
+    }
+
+    public String getPhone() {
+        return mPhone;
+    }
+
+    public void setPhone(String mPhone) {
+        this.mPhone = mPhone;
+    }
+
+    public String getAlternateEmail() {
+        return mAlternateEmail;
+    }
+
+    public void setAlternateEmail(String mAlternateEmail) {
+        this.mAlternateEmail = mAlternateEmail;
+    }
+
+    protected UserProfile(Parcel in) {
         this.mEmail = in.readString();
         this.mFullName = in.readString();
         this.mNickName = in.readString();
@@ -70,15 +134,15 @@ public class Login implements Parcelable {
         return gson.toJson(this);
     }
 
-    public static final Creator<Login> CREATOR = new Creator<Login>() {
+    public static final Creator<UserProfile> CREATOR = new Creator<UserProfile>() {
         @Override
-        public Login createFromParcel(Parcel source) {
-            return new Login(source);
+        public UserProfile createFromParcel(Parcel source) {
+            return new UserProfile(source);
         }
 
         @Override
-        public Login[] newArray(int size) {
-            return new Login[size];
+        public UserProfile[] newArray(int size) {
+            return new UserProfile[size];
         }
     };
 

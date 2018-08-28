@@ -1,5 +1,7 @@
 package com.srn.crm.view;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -10,19 +12,24 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.srn.crm.R;
+import com.srn.crm.core.api.UserApi;
 import com.srn.crm.view.base.BaseActivity;
+import com.srn.crm.view.common.OpeningActivity;
 import com.srn.crm.view.home.HomeFragment;
 import com.srn.crm.view.location.LocationFragment;
 import com.srn.crm.view.notification.NotificationFragment;
 import com.srn.crm.view.points.PointsFragment;
 import com.srn.crm.view.rewards.RewardsFragment;
+import com.srn.crm.view.utils.Redirector;
 import com.srn.crm.view.widget.CircleTransform;
 
 import java.lang.reflect.Field;
@@ -30,6 +37,8 @@ import java.lang.reflect.Field;
 import butterknife.BindView;
 
 public class MainActivity extends BaseActivity {
+
+    private UserApi mUserApi;
 
     /*@BindView(R.id.message)
     protected TextView mTextMessage;*/
@@ -73,12 +82,14 @@ public class MainActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mUserApi = new UserApi(getApplicationContext());
         setupProfileImage();
         mActionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         mBottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         mBottomNavigation.setSelectedItemId(R.id.navigation_home);
         removeShiftMode(mBottomNavigation);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

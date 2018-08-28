@@ -7,7 +7,7 @@ public class RestConstants {
     public static final String ACCEPT = "Accept: application/json";
 
     //base api
-    public static final String BASE_URL = "/srn-api/v1/";
+    public static final String BASE_URL = "/srn-api/";
 
     //user api
     public static final String LOGIN = BASE_URL + "login.json";

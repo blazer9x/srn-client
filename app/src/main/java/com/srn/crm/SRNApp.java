@@ -17,6 +17,6 @@ public class SRNApp extends SRNApplication {
 
     @Override
     public String getServerEndPoint() {
-        return null;
+        return AppConfig.SRN_END_POINT_SERVER;
     }
 }
