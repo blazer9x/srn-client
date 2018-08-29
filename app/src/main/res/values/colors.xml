@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8d6e63</color>
-    <color name="colorPrimaryDark">#896254</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--General Colors-->
+    <!--Light Blue base colors, Primary Color Theme-->
+    <color name="light_blue_800">#0277BD</color>
+    <color name="light_blue_800_accent">#00BCD4</color>
+    <color name="light_blue_800_dark">#025F97</color>
+    <color name="light_blue_800_light">#E1F5FE</color>
+
+
+    <color name="light_white">#FFFFFF</color>
+
+    <!--Cyan base colors, Secondary Color Theme-->
+    <color name="cyan_500">#00BCD4</color>
+    <color name="cyan_500_accent">#87E2EE</color>
+    <color name="cyan_500_dark">#0097A7</color>
+    <color name="cyan_500_darker">#007986</color>
+    <color name="cyan_500_light">#B2EBF2</color>
+
+    <!-- 3rd base color -->
+    <color name="base_3rd_light">#00bcd4</color>
+    <color name="base_3rd_dark">#01579b</color>
+
+    <!--White base colors-->
+    <color name="white">#FFFFFF</color><!--default font color-->
+    <color name="gray">#212121</color><!--date font color-->
+    <color name="black">#000000</color>
+    <color name="custom_gray">#9A9A9A</color>
+    <color name="custom_gray_2">#616161</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="black_opacity_25">#40000000</color>
+    <color name="black_opacity_76">#C2000000</color>
+    <color name="black_opacity_15">#26000000</color>
+    <color name="black_opacity_10">#10000000</color>
+    <color name="black_opacity_0">#00000000</color>
+    <color name="custom_light_gray">#90A4AE</color>
+
+    <!--Other colors-->
+    <color name="dark_blue">#09466E</color>
+    <color name="darker_blue">#01456E</color>
+    <color name="gray_blue">#607D8B</color>
+    <color name="custom_blue_1">#1456E7</color>
+    <color name="custom_red_1">#EE0000</color>
+    <color name="spinner_disable_line">#D6D6D6</color>
+    <color name="main_background">#E6E6E6</color>
+    <color name="main_background_accent">#D6D6D6</color>
+    <color name="custom_green">#00838F</color>
+    <color name="custom_green_2">#006064</color>
+    <color name="bg_edit_text_line">#E6E6E6</color>
+
 </resources>

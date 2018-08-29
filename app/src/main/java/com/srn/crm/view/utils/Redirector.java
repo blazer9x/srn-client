@@ -19,4 +19,8 @@ public class Redirector {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         activity.startActivity(intent);
     }
+
+    public static void redirectToTermConditionScreen(Activity activity) {
+
+    }
 }

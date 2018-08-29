@@ -59,12 +59,23 @@ public class PreferenceManager {
         editor.commit();
     }
 
+    public void setTermsCondition(boolean agreement) {
+        mSharedPreferences.edit().putBoolean(PreferenceConstant.APP_TERM_CONDITION_AGREEMENT, agreement).commit();
+    }
+
+    public boolean isTermsConditionChecked() {
+        return mSharedPreferences.getBoolean(PreferenceConstant.APP_TERM_CONDITION_AGREEMENT, false);
+    }
+
     private static interface PreferenceConstant {
         String FILE_NAME = "pref_srn_core";
 
         /* user device*/
         String FCM_REGISTRATION_ID = "fcm_registration_id";
         String SESSION_ID = "sessionid";
+
+        /* app term and condition */
+        String APP_TERM_CONDITION_AGREEMENT = "tnc_agreement";
 
         /* user profile */
         String PROFILE_EMAIL = "profile_email";

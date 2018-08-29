@@ -1,6 +1,7 @@
 package com.srn.crm.view.base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,11 @@ public class BaseActivity extends AppCompatActivity {
     public void setContentView(View view) {
         super.setContentView(view);
         ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(newBase);
     }
 
     @Override

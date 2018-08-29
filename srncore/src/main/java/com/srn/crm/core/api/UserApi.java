@@ -24,6 +24,10 @@ public class UserApi extends BaseApi {
         return PreferenceManager.getInstance(mContext).getSessionId() != null ? true : false;
     }
 
+    public boolean isAppTncConfirmed() {
+        return PreferenceManager.getInstance(mContext).isTermsConditionChecked();
+    }
+
     public void registerDevice(String fcmId, final Callback<Void> callback) {
         ProvisionRequest request = new ProvisionRequest();
 

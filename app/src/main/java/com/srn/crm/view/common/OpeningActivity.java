@@ -12,14 +12,15 @@ import com.srn.crm.core.api.UserApi;
 import com.srn.crm.core.callback.Callback;
 import com.srn.crm.core.model.response.Provisioning;
 import com.srn.crm.view.MainActivity;
+import com.srn.crm.view.base.BaseActivity;
 import com.srn.crm.view.utils.Redirector;
 
-public class OpeningActivity extends AppCompatActivity {
+public class OpeningActivity extends BaseActivity {
 
     private UserApi mUserApi;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mUserApi = new UserApi(this);
         if (!mUserApi.isProvisioned()) {
@@ -29,6 +30,10 @@ public class OpeningActivity extends AppCompatActivity {
 
 
     private void setupProvisioning() {
+        if (!mUserApi.isAppTncConfirmed()) {
+            Redirector.redirectToTermConditionScreen(this);
+            return;
+        }
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
             @Override
             public void onSuccess(InstanceIdResult instanceIdResult) {

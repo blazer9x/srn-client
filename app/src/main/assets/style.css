@@ -1,0 +1,13 @@
+@font-face{
+    font-family: MyFont;
+    src: url("file:///android_asset/fonts/notosans/NotoSans-Regular.ttf")
+}
+body {
+    font-family: MyFont;
+    text-align: justify;
+    word-wrap: break-word;
+    color: #01456E;
+}
+h4 {
+    color: #01456E;
+}
