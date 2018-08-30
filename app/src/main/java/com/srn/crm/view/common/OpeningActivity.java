@@ -46,6 +46,7 @@ public class OpeningActivity extends BaseActivity {
         mUserApi.registerDevice(fcmId, new Callback<Void>() {
             @Override
             public void onSuccess(Void result) {
+                //test commit
                 Redirector.redirectToMainScreen(OpeningActivity.this);
             }
 
@@ -56,6 +57,7 @@ public class OpeningActivity extends BaseActivity {
             }
         });
     }
+
 
 
 
